@@ -6,7 +6,7 @@
 %define	pdir	Net
 %define	pnam	SSH-Perl
 Summary:	Net::SSH::Perl - Perl client Interface to SSH
-#Summary(pl):	
+Summary(pl):	Net::SSH::Perl - perlowy interfejs kliencki do SSH
 Name:		perl-Net-SSH-Perl
 Version:	1.25
 Release:	1
@@ -15,7 +15,7 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	4022c3de719f6b3a1b3ad389ab492754
-BuildRequires:	perl-devel >= 5.6
+BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 # just taken from Makefile; probably not all are required for tests...
@@ -35,11 +35,14 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-I<Net::SSH::Perl> is an all-Perl module implementing an SSH (Secure Shell)
-client. It is compatible with both the SSH-1 and SSH-2 protocols.
+Net::SSH::Perl is an all-Perl module implementing an SSH (Secure
+Shell) client. It is compatible with both the SSH-1 and SSH-2
+protocols.
 
-# %description -l pl
-# TODO
+%description -l pl
+Net::SSH::Perl to napisany w ca³o¶ci w Perlu modu³ implementuj±cy
+klienta SSH (Secure Shell). Jest kompatybilny z protoko³ami zarówno
+SSH-1 jak i SSH-2.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
