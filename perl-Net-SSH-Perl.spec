@@ -20,12 +20,12 @@ BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 # just taken from Makefile; probably not all are required for tests...
 BuildRequires:	perl-Convert-PEM >= 0.05
-BuildRequires:	perl-Crypt-DH    >= 0.01
-BuildRequires:	perl-Crypt-DSA   >= 0.11
+BuildRequires:	perl-Crypt-DH >= 0.01
+BuildRequires:	perl-Crypt-DSA >= 0.11
 BuildRequires:	perl-Digest-HMAC
 BuildRequires:	perl-Digest-MD5
 BuildRequires:	perl-Digest-SHA1
-BuildRequires:	perl-Math-GMP  >= 1.04
+BuildRequires:	perl-Math-GMP >= 1.04
 BuildRequires:	perl-Math-Pari >= 2.001804
 BuildRequires:	perl-MIME-Base64
 BuildRequires:	perl-Scalar-List-Utils
