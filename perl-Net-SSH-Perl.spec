@@ -3,8 +3,8 @@
 %bcond_without	tests		# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Net
-%define	pnam	SSH-Perl
+%define		pdir	Net
+%define		pnam	SSH-Perl
 Summary:	Net::SSH::Perl - Perl client Interface to SSH
 Summary(pl):	Net::SSH::Perl - perlowy interfejs kliencki do SSH
 Name:		perl-Net-SSH-Perl
