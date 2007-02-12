@@ -6,7 +6,7 @@
 %define		pdir	Net
 %define		pnam	SSH-Perl
 Summary:	Net::SSH::Perl - Perl client Interface to SSH
-Summary(pl):	Net::SSH::Perl - perlowy interfejs kliencki do SSH
+Summary(pl.UTF-8):   Net::SSH::Perl - perlowy interfejs kliencki do SSH
 Name:		perl-Net-SSH-Perl
 Version:	1.30
 Release:	0.1
@@ -40,9 +40,9 @@ Net::SSH::Perl is an all-Perl module implementing an SSH (Secure
 Shell) client. It is compatible with both the SSH-1 and SSH-2
 protocols.
 
-%description -l pl
-Net::SSH::Perl to napisany w ca≥o∂ci w Perlu modu≥ implementuj±cy
-klienta SSH (Secure Shell). Jest kompatybilny z protoko≥ami zarÛwno
+%description -l pl.UTF-8
+Net::SSH::Perl to napisany w ca≈Ço≈õci w Perlu modu≈Ç implementujƒÖcy
+klienta SSH (Secure Shell). Jest kompatybilny z protoko≈Çami zar√≥wno
 SSH-1 jak i SSH-2.
 
 %prep
