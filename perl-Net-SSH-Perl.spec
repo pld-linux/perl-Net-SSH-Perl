@@ -6,7 +6,7 @@
 %define		pdir	Net
 %define		pnam	SSH-Perl
 Summary:	Net::SSH::Perl - Perl client Interface to SSH
-Summary(pl.UTF-8):   Net::SSH::Perl - perlowy interfejs kliencki do SSH
+Summary(pl.UTF-8):	Net::SSH::Perl - perlowy interfejs kliencki do SSH
 Name:		perl-Net-SSH-Perl
 Version:	1.30
 Release:	0.1
