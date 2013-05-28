@@ -9,7 +9,7 @@ Summary:	Net::SSH::Perl - Perl client Interface to SSH
 Summary(pl.UTF-8):	Net::SSH::Perl - perlowy interfejs kliencki do SSH
 Name:		perl-Net-SSH-Perl
 Version:	1.34
-Release:	2
+Release:	3
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -27,7 +27,6 @@ BuildRequires:	perl-Digest-SHA1 >= 2.10
 BuildRequires:	perl-Math-GMP >= 1.04
 BuildRequires:	perl-Math-Pari >= 2.001804
 BuildRequires:	perl-MIME-Base64
-BuildRequires:	perl-Scalar-List-Utils
 BuildRequires:	perl-String-CRC32 >= 1.2
 %endif
 Requires:	perl-Convert-PEM >= 0.05
@@ -44,7 +43,6 @@ Requires:	perl-Digest-SHA1 >= 2.10
 Requires:	perl-Math-GMP >= 1.04
 Requires:	perl-Math-Pari >= 2.001804
 Requires:	perl-MIME-Base64
-Requires:	perl-Scalar-List-Utils
 Requires:	perl-String-CRC32 >= 1.2
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
