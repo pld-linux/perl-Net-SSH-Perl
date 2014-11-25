@@ -1,10 +1,10 @@
 #
 # Conditional build:
 %bcond_without	tests		# do not perform "make test"
-#
-%include	/usr/lib/rpm/macros.perl
+
 %define		pdir	Net
 %define		pnam	SSH-Perl
+%include	/usr/lib/rpm/macros.perl
 Summary:	Net::SSH::Perl - Perl client Interface to SSH
 Summary(pl.UTF-8):	Net::SSH::Perl - perlowy interfejs kliencki do SSH
 Name:		perl-Net-SSH-Perl
@@ -15,6 +15,7 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	5b6d60e459707058e856c45c30e96e53
+URL:		http://search.cpan.org/dist/Net-SSH-Perl/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
@@ -24,9 +25,9 @@ BuildRequires:	perl-Crypt-DSA >= 0.11
 BuildRequires:	perl-Digest-HMAC
 BuildRequires:	perl-Digest-MD5
 BuildRequires:	perl-Digest-SHA1 >= 2.10
+BuildRequires:	perl-MIME-Base64
 BuildRequires:	perl-Math-GMP >= 1.04
 BuildRequires:	perl-Math-Pari >= 2.001804
-BuildRequires:	perl-MIME-Base64
 BuildRequires:	perl-String-CRC32 >= 1.2
 %endif
 Requires:	perl-Convert-PEM >= 0.05
@@ -40,9 +41,9 @@ Requires:	perl-Digest-BubbleBabble
 Requires:	perl-Digest-HMAC
 Requires:	perl-Digest-MD5
 Requires:	perl-Digest-SHA1 >= 2.10
+Requires:	perl-MIME-Base64
 Requires:	perl-Math-GMP >= 1.04
 Requires:	perl-Math-Pari >= 2.001804
-Requires:	perl-MIME-Base64
 Requires:	perl-String-CRC32 >= 1.2
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
