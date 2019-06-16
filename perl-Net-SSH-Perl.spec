@@ -8,13 +8,13 @@
 Summary:	Net::SSH::Perl - Perl client Interface to SSH
 Summary(pl.UTF-8):	Net::SSH::Perl - perlowy interfejs kliencki do SSH
 Name:		perl-Net-SSH-Perl
-Version:	1.34
-Release:	3
+Version:	2.14
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	5b6d60e459707058e856c45c30e96e53
+# Source0-md5:	f831bc57d845da9343da7b8d5a755847
 URL:		http://search.cpan.org/dist/Net-SSH-Perl/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -45,7 +45,6 @@ Requires:	perl-MIME-Base64
 Requires:	perl-Math-GMP >= 1.04
 Requires:	perl-Math-Pari >= 2.001804
 Requires:	perl-String-CRC32 >= 1.2
-BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -62,7 +61,7 @@ SSH-1 jak i SSH-2.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} -MExtUtils::MakeMaker -e 'WriteMakefile(NAME=>"Perl::Net::SSH::Perl")' \
+PERL_MM_USE_DEFAULT=1 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
 %{__make}
 
@@ -83,8 +82,11 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes ToDo
-%dir %{perl_vendorlib}/Net/SSH
-%{perl_vendorlib}/Net/SSH/*.pm
-%{perl_vendorlib}/Net/SSH/Perl
+%dir %{perl_vendorarch}/auto/Net/SSH
+%dir %{perl_vendorarch}/auto/Net/SSH/Perl
+%dir %{perl_vendorarch}/Net/SSH
+%{perl_vendorarch}/auto/Net/SSH/Perl/Perl.so
+%{perl_vendorarch}/Net/SSH/*.pm
+%{perl_vendorarch}/Net/SSH/Perl
 %{_mandir}/man3/*
 %{_examplesdir}/%{name}-%{version}
