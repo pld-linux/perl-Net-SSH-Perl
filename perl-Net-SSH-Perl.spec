@@ -85,7 +85,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{perl_vendorarch}/auto/Net/SSH
 %dir %{perl_vendorarch}/auto/Net/SSH/Perl
 %dir %{perl_vendorarch}/Net/SSH
-%{perl_vendorarch}/auto/Net/SSH/Perl/Perl.so
+%attr(755,root,root) %{perl_vendorarch}/auto/Net/SSH/Perl/Perl.so
 %{perl_vendorarch}/Net/SSH/*.pm
 %{perl_vendorarch}/Net/SSH/Perl
 %{_mandir}/man3/*
