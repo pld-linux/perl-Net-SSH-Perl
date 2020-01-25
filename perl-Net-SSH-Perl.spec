@@ -4,7 +4,6 @@
 
 %define		pdir	Net
 %define		pnam	SSH-Perl
-%include	/usr/lib/rpm/macros.perl
 Summary:	Net::SSH::Perl - Perl client Interface to SSH
 Summary(pl.UTF-8):	Net::SSH::Perl - perlowy interfejs kliencki do SSH
 Name:		perl-Net-SSH-Perl
