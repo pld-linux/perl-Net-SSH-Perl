@@ -8,7 +8,7 @@ Summary:	Net::SSH::Perl - Perl client Interface to SSH
 Summary(pl.UTF-8):	Net::SSH::Perl - perlowy interfejs kliencki do SSH
 Name:		perl-Net-SSH-Perl
 Version:	2.14
-Release:	3
+Release:	4
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
