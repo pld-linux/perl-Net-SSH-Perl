@@ -7,44 +7,33 @@
 Summary:	Net::SSH::Perl - Perl client Interface to SSH
 Summary(pl.UTF-8):	Net::SSH::Perl - perlowy interfejs kliencki do SSH
 Name:		perl-Net-SSH-Perl
-Version:	2.14
-Release:	8
+Version:	2.144
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	f831bc57d845da9343da7b8d5a755847
+Source0:	https://www.cpan.org/authors/id/B/BD/BDFOY/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	219bba3277b40cc4df4cbd7d74ee0777
 URL:		http://search.cpan.org/dist/Net-SSH-Perl/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
-BuildRequires:	perl-Convert-PEM >= 0.05
-BuildRequires:	perl-Crypt-DH >= 0.01
-BuildRequires:	perl-Crypt-DSA >= 0.11
-BuildRequires:	perl-CryptX >= 0.066
-BuildRequires:	perl-Digest-HMAC
+BuildRequires:	perl-Crypt-Curve25519 >= 0.05
+BuildRequires:	perl-Crypt-IDEA
+BuildRequires:	perl-CryptX >= 0.032
 BuildRequires:	perl-Digest-MD5
-BuildRequires:	perl-Digest-SHA1 >= 2.10
 BuildRequires:	perl-File-HomeDir
-BuildRequires:	perl-MIME-Base64
 BuildRequires:	perl-Math-GMP >= 1.04
-BuildRequires:	perl-Math-Pari >= 2.001804
 BuildRequires:	perl-String-CRC32 >= 1.2
 %endif
-Requires:	perl-Convert-PEM >= 0.05
-Requires:	perl-Crypt-Blowfish
-Requires:	perl-Crypt-DES
-Requires:	perl-Crypt-DH >= 0.01
-Requires:	perl-Crypt-DSA >= 0.11
+Requires:	perl-Crypt-Curve25519 >= 0.05
 Requires:	perl-Crypt-IDEA
 Requires:	perl-Crypt-RSA
+Requires:	perl-CryptX >= 0.032
 Requires:	perl-Digest-BubbleBabble
-Requires:	perl-Digest-HMAC
 Requires:	perl-Digest-MD5
-Requires:	perl-Digest-SHA1 >= 2.10
-Requires:	perl-MIME-Base64
+Requires:	perl-File-HomeDir
 Requires:	perl-Math-GMP >= 1.04
-Requires:	perl-Math-Pari >= 2.001804
 Requires:	perl-String-CRC32 >= 1.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
